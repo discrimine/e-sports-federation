@@ -5,6 +5,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card'
 
 const sharedComponents = [
   HeaderComponent,
@@ -14,6 +16,9 @@ const sharedComponents = [
 const sharedModules = [
   MatListModule,
   MatButtonModule,
+  MatProgressSpinnerModule,
+  MatCardModule,
+  RouterModule
 ];
 
 @NgModule({

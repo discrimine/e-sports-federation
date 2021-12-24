@@ -7,7 +7,7 @@ import { DocumentsComponent } from './documents.component';
 @NgModule({
   declarations: [DocumentsComponent],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class DocumentsModule { }

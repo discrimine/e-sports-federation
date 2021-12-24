@@ -1,25 +1,16 @@
-<div class="news-card" *ngFor="let newsContent of news">
-  <img [src]="newsContent.preview">
-  <div [innerHtml]="newsContent.title"></div>
-  <div [innerHtml]="newsContent.date | date"></div>
-</div>
-<div class="news-card" *ngFor="let newsContent of news">
-  <img [src]="newsContent.preview">
-  <div [innerHtml]="newsContent.title"></div>
-  <div [innerHtml]="newsContent.date"></div>
-</div>
-<div class="news-card" *ngFor="let newsContent of news">
-  <img [src]="newsContent.preview">
-  <div [innerHtml]="newsContent.title"></div>
-  <div [innerHtml]="newsContent.date"></div>
-</div>
-<div class="news-card" *ngFor="let newsContent of news">
-  <img [src]="newsContent.preview">
-  <div [innerHtml]="newsContent.title"></div>
-  <div [innerHtml]="newsContent.date"></div>
-</div>
-<div class="news-card" *ngFor="let newsContent of news">
-  <img [src]="newsContent.preview">
-  <div [innerHtml]="newsContent.title"></div>
-  <div [innerHtml]="newsContent.date"></div>
+<h1 [align]="'center'"> Новини </h1>
+
+<mat-card class="news-card" *ngFor="let item of news">
+  <div class="news-card-image">
+    <img [src]="item.preview">
+  </div>
+  <div class="news-card-content">
+    <div class="title" [innerHtml]="item.title"></div>
+    <div class="description"> <span [innerHtml]="item.description"></span>... <a [routerLink]="'/news-profile/' + item.id">читати далі</a> </div>
+    <div class="date" [innerHtml]="item.date"></div>
+  </div>
+</mat-card>
+
+<div class="loading-mask" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
 </div>

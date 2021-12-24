@@ -9,11 +9,11 @@ export class NewsService {
 
   constructor(private apiService: ApiService) { }
 
-  public getNews(): Observable<any> {
+  public getArticles(): Observable<any> {
     return this.apiService.get('/wp-json/wp/v2/posts?acf_format=standard');
   }
 
-  public getNew(id: number) {
-
+  public getArticle(id: number): Observable<any> {
+    return this.apiService.get(`/wp-json/wp/v2/posts/${id}?acf_format=standard`);
   }
 }
