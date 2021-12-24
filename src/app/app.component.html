@@ -1,0 +1,18 @@
+<div class="page-wrapper">
+  <div class="header-wrapper" [ngStyle]="{height: headerHeight}">
+    <div class="header-inner-wrapper">
+      <app-header></app-header>
+    </div>
+  </div>
+  <div class="content-wrapper" [ngStyle]="{'min-height': contentHeight, 'margin-top': contentIndent, 'margin-bottom': contentIndent}">
+    <div class="content-inner-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer-wrapper" [ngStyle]="{height: footerHeight}">
+    <div class="footer-inner-wrapper">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+

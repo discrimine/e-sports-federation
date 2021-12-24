@@ -1,0 +1,15 @@
+@import 'colors';
+
+.page-wrapper {
+  width: 100%;
+
+  .header-wrapper, .footer-wrapper {
+    background-color: $default-grey;
+  }
+
+  .header-inner-wrapper, .footer-inner-wrapper, .content-inner-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+

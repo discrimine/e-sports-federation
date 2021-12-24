@@ -1,0 +1,12 @@
+@import 'colors';
+
+.news-card {
+  border: 1px solid $default-grey;
+  padding: 25px;
+  border-radius: 20px;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+
+}
