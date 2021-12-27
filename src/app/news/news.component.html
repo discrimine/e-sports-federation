@@ -1,6 +1,6 @@
 <h1 [align]="'center'"> Новини </h1>
 
-<mat-card class="news-card" *ngFor="let item of news">
+<mat-card class="news-card" *ngFor="let item of news.items">
   <div class="news-card-image">
     <img [src]="item.preview">
   </div>
@@ -10,6 +10,13 @@
     <div class="date" [innerHtml]="item.date"></div>
   </div>
 </mat-card>
+
+<mat-paginator
+  [hidePageSize]="true"
+  [length]="news.total"
+  [pageSize]="10"
+  (page)="onPageChange($event)">
+</mat-paginator>
 
 <div class="loading-mask" *ngIf="isLoading">
   <mat-spinner></mat-spinner>

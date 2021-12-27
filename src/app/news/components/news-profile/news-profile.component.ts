@@ -17,8 +17,7 @@ export class NewsProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.newsService.getArticle(this.route.snapshot.params['id']).pipe(take(1)).subscribe((article) => {
-      console.log(article)
-      this.article = article;
+      this.article = article.body;
     });
   }
 

@@ -1,0 +1,30 @@
+@import 'colors';
+
+.article-title {
+  text-align: center;
+  font-weight: 500;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+:host::ng-deep {
+  a {
+    height: initial;
+    width: initial;
+    color: $default-blue;
+    text-decoration: none;
+
+    &:hover {
+      color: $default-blue;
+    }
+  }
+
+  p {
+    width: 100%;
+  }
+}
